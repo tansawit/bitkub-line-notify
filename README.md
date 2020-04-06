@@ -17,4 +17,4 @@ Create a `.env` file inside the cloned `bitkub-line-notify` folder with the foll
 
 Create a [new LINE notify service](https://notify-bot.line.me/my/) by generating a new access token. Add that token to the `.env` file as `LINE_NOTIFY_TOKEN`
 
-Then you can run the Dockerfile on a machine/cloud service of your choice and it will send you details about your portfolio every day at 9:00 AM
+Then you can run the Dockerfile on a machine/cloud service of your choice and it will send you details about your portfolio every day at 9:00 AM.
