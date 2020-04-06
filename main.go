@@ -25,6 +25,7 @@ func main() {
 func sendNotification() {
 	apiKey := os.Getenv("BITKUB_API_KEY")
 	apiSecret := os.Getenv("BITKUB_API_SECRET")
+	lineToken := os.Getenv("LINE_NOTFY_TOKEN")
 
 	// Get port info
 	port := getWallet(apiKey, apiSecret)
@@ -54,7 +55,7 @@ func sendNotification() {
 
 	client := &http.Client{}
 	r, _ := http.NewRequest("POST", urlStr, strings.NewReader(data.Encode())) // URL-encoded payload
-	r.Header.Add("Authorization", "Bearer cyECqwAUl8vOFmeEMrEIQFIjUHtl0iz8uKc7odC6cIA")
+	r.Header.Add("Authorization", fmt.Sprintf("Bearer %s", lineToken))
 	r.Header.Add("Content-Type", "application/x-www-form-urlencoded")
 	r.Header.Add("Content-Length", strconv.Itoa(len(data.Encode())))
 

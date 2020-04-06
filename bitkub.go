@@ -97,7 +97,6 @@ func getWallet(apiKey, apiSecret string) map[string]interface{} {
 	req.Header.Add("Accept", "application/json")
 	req.Header.Add("X-BTK-APIKEY", apiKey)
 	req.Header.Add("Content-Type", "application/json; charset=utf-8")
-	req.Header.Add("Cookie", "__cfduid=d382fb39d4eae82331a4267439298f7341585974284; XSRF-TOKEN=eyJpdiI6IjdSXC9MNG9aa1p2Qk1WZEJjV0FnNkFBPT0iLCJ2YWx1ZSI6Ik9CbzlzNWt2Mkc1WGtNZVpNaXMwWjIwVkVLckxVdTdVN1dsRW5JTERqakJNaXNOVDNPSWRTM0p1ZkpKWGpkZVNXc0R2XC9WaUNpZFhsWlpFNXNQN2hRZz09IiwibWFjIjoiOGM3N2EzYjRkNDAxZmE2ZGI0ZDZlMGFlMTRlZDI4N2FiMmFiZDJhOThiMzAyMmVhNzRkOWZhY2E5ZjhiNjI5MyJ9; laravel_session=eyJpdiI6Im1qbThwMXM5STlUS0p5VjhYSTA4M0E9PSIsInZhbHVlIjoiUEJyZVBuYnRQUGlHd0RxMzhjbisrQ25OOTlncENvd292bVFKY2xJQm1SYm9aaDNxTTZMRG1mWlwvOVJtMnpsaXJZVkVrK1M3ekVrQ1BTSHVQZjhwcXdBPT0iLCJtYWMiOiI2Y2E4MGVjNjlmYTUxMDI1Y2MzYTBkMTQyNGU3NzM2NmEzYTNiZDRjN2JhZTRmMWFiODYwMmRlODE3N2Q4Yzk4In0%3D")
 
 	// Fetch Request
 	resp, err := client.Do(req)

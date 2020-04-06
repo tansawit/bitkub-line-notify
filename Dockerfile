@@ -14,4 +14,4 @@ RUN apk add --no-cache ca-certificates
 
 COPY --from=builder /app/bitkub-line-notify /bitkub-line-notify
 
-CMD ["./notelog-data"]
+CMD ["./bitkub-line-notify"]
